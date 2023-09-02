@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Form } from "./Form"
 import { TodoList } from "./TodoList"
+import { }  from "./index.css"
+
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -30,7 +32,6 @@ export default function App() {
   }
 
   function toggleCheckBox(id, checked) {
-    /// text-decoration: line-through;
     setTodos(curr => {
       return curr.map(todos => {
         if (todos.id === id) {
@@ -47,8 +48,8 @@ export default function App() {
 
   return (
     <>
+      <h1 className="my-5-d text-4xl text-center text-violet-500"> Todo App</h1>
       <Form onNewItem={addNewItem} />
-      <h1> Todo App</h1>
       <TodoList
         todos={todos}
         toggleCheckBox={toggleCheckBox}
