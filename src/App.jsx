@@ -12,7 +12,6 @@ export default function App() {
   })
 
   useEffect(() => { 
-    document.title = 'todo-app-react';
     localStorage.setItem('TODO_ITEM', JSON.stringify(todos))
   }, [todos] )
 
